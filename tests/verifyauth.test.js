@@ -23,7 +23,7 @@ describe('verifyauth', function ( ) {
   });
 
   it('should return defaults when called without secret', function (done) {
-    var known = 'b723e97aa97846eb92d5264f084b2823f57c4aa1';
+    var known = '53c518a05766fff2241444d377d73379ca8fdea4718fb79985ace86662e459f0';
     var known512 = '8c8743d38cbe00debe4b3ba8d0ffbb85e4716c982a61bb9e57bab203178e3718b2965831c1a5e42b9da16f082fdf8a6cecf993b49ed67e3a8b1cd475885d8070';
     delete process.env.API_SECRET;
     process.env.API_SECRET = 'this is my long pass phrase';
@@ -38,7 +38,7 @@ describe('verifyauth', function ( ) {
   });
 
   it('should fail when calling with wrong secret', function (done) {
-    var known = 'b723e97aa97846eb92d5264f084b2823f57c4aa1';
+    var known = '53c518a05766fff2241444d377d73379ca8fdea4718fb79985ace86662e459f0';
     delete process.env.API_SECRET;
     process.env.API_SECRET = 'this is my long pass phrase';
     var env = require('../lib/server/env')( );
@@ -58,7 +58,7 @@ describe('verifyauth', function ( ) {
 
 
   it('should fail unauthorized and delay subsequent attempts', function (done) {
-    var known = 'b723e97aa97846eb92d5264f084b2823f57c4aa1';
+    var known = '53c518a05766fff2241444d377d73379ca8fdea4718fb79985ace86662e459f0';
     delete process.env.API_SECRET;
     process.env.API_SECRET = 'this is my long pass phrase';
     var env = require('../lib/server/env')( );
@@ -87,7 +87,7 @@ describe('verifyauth', function ( ) {
 
 
   it('should work fine authorized', function (done) {
-    var known = 'b723e97aa97846eb92d5264f084b2823f57c4aa1';
+    var known = '53c518a05766fff2241444d377d73379ca8fdea4718fb79985ace86662e459f0';
     delete process.env.API_SECRET;
     process.env.API_SECRET = 'this is my long pass phrase';
     var env = require('../lib/server/env')( );

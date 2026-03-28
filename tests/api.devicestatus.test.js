@@ -8,7 +8,7 @@ var language = require('../lib/language')();
 describe('Devicestatus API', function ( ) {
   this.timeout(10000);
   var self = this;
-  var known = 'b723e97aa97846eb92d5264f084b2823f57c4aa1';
+  var known = '53c518a05766fff2241444d377d73379ca8fdea4718fb79985ace86662e459f0';
 
   var api = require('../lib/api/');
   beforeEach(function (done) {
